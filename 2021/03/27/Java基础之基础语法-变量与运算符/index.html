@@ -6,25 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Java基础之Java语言概述 | Hexo</title>
+  <title>Java基础之基础语法(变量与运算符) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java语言概述部分1. Java是如何运行的？编写：我们将编写的java代码保存在以”.java”结尾的源文件中编译：使用javac.exe命令编写我们的Java源文件。格式：Javac 源文件名.java运行:使用java.exe命令解释运行我们的字节码文件。格式：Java 类名具体如下图：  这是Java虚拟机在整个计算机中所处的位置 2. JDK JRE JVM三者之间的关系，JDK和JR">
+  <meta name="description" content="变量与运算符部分 标识符命名规则： 由26个英文大小写字母、0-9数字、_或 $ 组成 数字不可以开头 不可以使用关键字和保留字，但是能包含关键字和保留字 Java严格区分大小写，但是长度无限制 标识符不能包含空格   Java名称命名规范 包名：多单词组成时所有字母都小写 xxxyyyzzz 类名、接口名：多单词组成时，所有单词的首字母大写 XxxYyyZzz 变量名、方法名：多单词组成时，第一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java基础之Java语言概述">
-<meta property="og:url" content="http://example.com/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/index.html">
+<meta property="og:title" content="Java基础之基础语法(变量与运算符)">
+<meta property="og:url" content="http://example.com/2021/03/27/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Java语言概述部分1. Java是如何运行的？编写：我们将编写的java代码保存在以”.java”结尾的源文件中编译：使用javac.exe命令编写我们的Java源文件。格式：Javac 源文件名.java运行:使用java.exe命令解释运行我们的字节码文件。格式：Java 类名具体如下图：  这是Java虚拟机在整个计算机中所处的位置 2. JDK JRE JVM三者之间的关系，JDK和JR">
+<meta property="og:description" content="变量与运算符部分 标识符命名规则： 由26个英文大小写字母、0-9数字、_或 $ 组成 数字不可以开头 不可以使用关键字和保留字，但是能包含关键字和保留字 Java严格区分大小写，但是长度无限制 标识符不能包含空格   Java名称命名规范 包名：多单词组成时所有字母都小写 xxxyyyzzz 类名、接口名：多单词组成时，所有单词的首字母大写 XxxYyyZzz 变量名、方法名：多单词组成时，第一">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_1.png">
-<meta property="og:image" content="http://example.com/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_3.png">
-<meta property="og:image" content="http://example.com/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_7.png">
-<meta property="og:image" content="http://example.com/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_4.png">
-<meta property="og:image" content="http://example.com/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_5.png">
-<meta property="article:published_time" content="2021-03-25T07:41:13.000Z">
-<meta property="article:modified_time" content="2021-03-25T08:35:57.768Z">
+<meta property="og:image" content="http://example.com/2021/03/27/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/img.png">
+<meta property="og:image" content="http://example.com/2021/03/27/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/img_1.png">
+<meta property="article:published_time" content="2021-03-27T07:34:09.000Z">
+<meta property="article:modified_time" content="2021-03-27T08:04:13.169Z">
 <meta property="article:author" content="dragonlong">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_1.png">
+<meta name="twitter:image" content="http://example.com/2021/03/27/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/img.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -156,38 +153,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java基础之Java语言概述" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java基础之基础语法-变量与运算符" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java基础之Java语言概述
+      Java基础之基础语法(变量与运算符)
     </h1>
   
 
         
-        <a href="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2021-03-25T07:41:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-25</time>
+        <a href="/2021/03/27/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/" class="archive-article-date">
+  	<time datetime="2021-03-27T07:34:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Java语言概述部分"><a href="#Java语言概述部分" class="headerlink" title="Java语言概述部分"></a>Java语言概述部分</h1><h2 id="1-Java是如何运行的？"><a href="#1-Java是如何运行的？" class="headerlink" title="1. Java是如何运行的？"></a>1. Java是如何运行的？</h2><h3 id="编写：我们将编写的java代码保存在以”-java”结尾的源文件中"><a href="#编写：我们将编写的java代码保存在以”-java”结尾的源文件中" class="headerlink" title="编写：我们将编写的java代码保存在以”.java”结尾的源文件中"></a>编写：我们将编写的java代码保存在以”.java”结尾的源文件中</h3><h3 id="编译：使用javac-exe命令编写我们的Java源文件。格式：Javac-源文件名-java"><a href="#编译：使用javac-exe命令编写我们的Java源文件。格式：Javac-源文件名-java" class="headerlink" title="编译：使用javac.exe命令编写我们的Java源文件。格式：Javac 源文件名.java"></a>编译：使用javac.exe命令编写我们的Java源文件。格式：Javac 源文件名.java</h3><h3 id="运行-使用java-exe命令解释运行我们的字节码文件。格式：Java-类名"><a href="#运行-使用java-exe命令解释运行我们的字节码文件。格式：Java-类名" class="headerlink" title="运行:使用java.exe命令解释运行我们的字节码文件。格式：Java 类名"></a>运行:使用java.exe命令解释运行我们的字节码文件。格式：Java 类名</h3><h3 id="具体如下图："><a href="#具体如下图：" class="headerlink" title="具体如下图："></a>具体如下图：</h3><p><img src="img_1.png" alt="img_1.png"></p>
-<p><img src="img_3.png" alt="img_3.png"></p>
-<h3 id="这是Java虚拟机在整个计算机中所处的位置"><a href="#这是Java虚拟机在整个计算机中所处的位置" class="headerlink" title="这是Java虚拟机在整个计算机中所处的位置"></a>这是Java虚拟机在整个计算机中所处的位置</h3><p><img src="img_7.png" alt="img_7.png"></p>
-<h2 id="2-JDK-JRE-JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？"><a href="#2-JDK-JRE-JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？" class="headerlink" title="2. JDK JRE JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？"></a>2. JDK JRE JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？</h2><h3 id="下图可以形象表示他们之间的包含关系"><a href="#下图可以形象表示他们之间的包含关系" class="headerlink" title="下图可以形象表示他们之间的包含关系:"></a>下图可以形象表示他们之间的包含关系:</h3><p><img src="img_4.png" alt="img_4.png"></p>
-<ul>
-<li>JDK = JRE + 开发工具集（Javac编译工具[javac.exe、java.exe、javadoc.exe]等）</li>
+        <h1 id="变量与运算符部分"><a href="#变量与运算符部分" class="headerlink" title="变量与运算符部分"></a>变量与运算符部分</h1><hr>
+<h2 id="标识符命名规则："><a href="#标识符命名规则：" class="headerlink" title="标识符命名规则："></a>标识符命名规则：</h2><ul>
+<li>由26个英文大小写字母、0-9数字、_或 $ 组成</li>
+<li>数字不可以开头</li>
+<li>不可以使用关键字和保留字，但是能包含关键字和保留字</li>
+<li>Java严格区分大小写，但是长度无限制</li>
+<li>标识符不能包含空格</li>
 </ul>
-<ul>
-<li>JRE = JVM + Java标准类库</li>
+<hr>
+<h2 id="Java名称命名规范"><a href="#Java名称命名规范" class="headerlink" title="Java名称命名规范"></a>Java名称命名规范</h2><ul>
+<li>包名：多单词组成时所有字母都小写 xxxyyyzzz</li>
+<li>类名、接口名：多单词组成时，所有单词的首字母大写 XxxYyyZzz</li>
+<li>变量名、方法名：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写： xxxYyyZzz</li>
+<li>常量名：所有字母都大写。多单词时每个单词用下划线连接 XXX_YYY_ZZZ</li>
 </ul>
-<h2 id="java-8-0平台下JDK、JRE、JVM的具体组成部分："><a href="#java-8-0平台下JDK、JRE、JVM的具体组成部分：" class="headerlink" title="java 8.0平台下JDK、JRE、JVM的具体组成部分："></a>java 8.0平台下JDK、JRE、JVM的具体组成部分：</h2><p><img src="img_5.png" alt="img_5.png"></p>
-<h2 id="3-为什么要配置环境变量？如何配置？"><a href="#3-为什么要配置环境变量？如何配置？" class="headerlink" title="3. 为什么要配置环境变量？如何配置？"></a>3. 为什么要配置环境变量？如何配置？</h2><h3 id="为了在任何文件路径下都可以执行Java开发环境，比如javac-exe文件，java-exe文件。新建JAVA-HOME-bin的上一层目录，path-JAVA-HOME-bin"><a href="#为了在任何文件路径下都可以执行Java开发环境，比如javac-exe文件，java-exe文件。新建JAVA-HOME-bin的上一层目录，path-JAVA-HOME-bin" class="headerlink" title="为了在任何文件路径下都可以执行Java开发环境，比如javac.exe文件，java.exe文件。新建JAVA_HOME=bin的上一层目录，path= %JAVA_HOME%\bin"></a>为了在任何文件路径下都可以执行Java开发环境，比如javac.exe文件，java.exe文件。新建JAVA_HOME=bin的上一层目录，path= %JAVA_HOME%\bin</h3>
+<hr>
+<h2 id="变量按照数据类型分为："><a href="#变量按照数据类型分为：" class="headerlink" title="变量按照数据类型分为："></a>变量按照数据类型分为：</h2><p><img src="img.png" alt="img.png"></p>
+<hr>
+<h2 id="基础数据类型之间的转换"><a href="#基础数据类型之间的转换" class="headerlink" title="基础数据类型之间的转换"></a>基础数据类型之间的转换</h2><h3 id="原则：容量小的数据类型自动转换成容量大的数据类型。"><a href="#原则：容量小的数据类型自动转换成容量大的数据类型。" class="headerlink" title="原则：容量小的数据类型自动转换成容量大的数据类型。"></a>原则：容量小的数据类型自动转换成容量大的数据类型。</h3><p><img src="img_1.png" alt="img_1.png"></p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><ul>
+<li>byte、char、short之间不会相互转换，他们首先转换成int类型</li>
+<li>当把任何基本数据类型的值和字符串(String)进行连接运算时基本数据类型的值将自动转化为字符串(String)类型</li>
+</ul>
+<hr>
+<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2><h3 id="自动转换类型的逆运算，即将容量大的数据类型转换成容量小的数据类型。"><a href="#自动转换类型的逆运算，即将容量大的数据类型转换成容量小的数据类型。" class="headerlink" title="自动转换类型的逆运算，即将容量大的数据类型转换成容量小的数据类型。"></a>自动转换类型的逆运算，即将容量大的数据类型转换成容量小的数据类型。</h3><h3 id="方法：在容量大的数据类型前面使用-容量小的数据类"><a href="#方法：在容量大的数据类型前面使用-容量小的数据类" class="headerlink" title="方法：在容量大的数据类型前面使用(容量小的数据类)"></a>方法：在容量大的数据类型前面使用(容量小的数据类)</h3>
       
 
       
@@ -276,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/27/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -290,18 +300,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/03/27/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java基础之基础语法(变量与运算符)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/03/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客文章!!</div>
+    <a href="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java基础之Java语言概述</div>
       <i class="icon-circle-right"></i>
     </a>
   
