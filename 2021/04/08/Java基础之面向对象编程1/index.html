@@ -6,15 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | Hexo</title>
+  <title>Java基础之面向对象编程1 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+  <meta name="description" content="面向对象编程部分面向对象思想编程的三大主线1.java类及类的成员：属性、方法、构造器;代码块、内部类2.面向对象的三大特征：封装性、继承性、多态性、（抽象性）3.其他关键字：this static super final abstract interface package import面向过程和面向对象的区别： 面向过程： 强调的是功能行为，以函数为最小单位，考虑怎么做 面向对象： 强调了具备">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础之面向对象编程1">
+<meta property="og:url" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="面向对象编程部分面向对象思想编程的三大主线1.java类及类的成员：属性、方法、构造器;代码块、内部类2.面向对象的三大特征：封装性、继承性、多态性、（抽象性）3.其他关键字：this static super final abstract interface package import面向过程和面向对象的区别： 面向过程： 强调的是功能行为，以函数为最小单位，考虑怎么做 面向对象： 强调了具备">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_1.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_2.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_3.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_4.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_5.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_6.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_7.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_8.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_9.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_10.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_11.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_12.png">
+<meta property="og:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_13.png">
+<meta property="article:published_time" content="2021-04-08T07:02:01.000Z">
+<meta property="article:modified_time" content="2021-04-08T10:11:38.599Z">
 <meta property="article:author" content="dragonlong">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -146,265 +165,246 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java基础之面向对象编程1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java基础之面向对象编程1
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/" class="archive-article-date">
+
+        
+        <a href="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/" class="archive-article-date">
   	<time datetime="2021-04-08T07:02:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-08</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/">Java基础之面向对象编程1</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="面向对象编程部分"><a href="#面向对象编程部分" class="headerlink" title="面向对象编程部分"></a>面向对象编程部分</h1><h2 id="面向对象思想编程的三大主线"><a href="#面向对象思想编程的三大主线" class="headerlink" title="面向对象思想编程的三大主线"></a>面向对象思想编程的三大主线</h2><h3 id="1-java类及类的成员：属性、方法、构造器-代码块、内部类"><a href="#1-java类及类的成员：属性、方法、构造器-代码块、内部类" class="headerlink" title="1.java类及类的成员：属性、方法、构造器;代码块、内部类"></a>1.java类及类的成员：属性、方法、构造器;代码块、内部类</h3><h3 id="2-面向对象的三大特征：封装性、继承性、多态性、（抽象性）"><a href="#2-面向对象的三大特征：封装性、继承性、多态性、（抽象性）" class="headerlink" title="2.面向对象的三大特征：封装性、继承性、多态性、（抽象性）"></a>2.面向对象的三大特征：封装性、继承性、多态性、（抽象性）</h3><h3 id="3-其他关键字：this-static-super-final-abstract-interface-package-import"><a href="#3-其他关键字：this-static-super-final-abstract-interface-package-import" class="headerlink" title="3.其他关键字：this static super final abstract interface package import"></a>3.其他关键字：this static super final abstract interface package import</h3><h2 id="面向过程和面向对象的区别："><a href="#面向过程和面向对象的区别：" class="headerlink" title="面向过程和面向对象的区别："></a>面向过程和面向对象的区别：</h2><ul>
+<li>面向过程： 强调的是功能行为，以函数为最小单位，考虑怎么做</li>
+<li>面向对象： 强调了具备了功能的对象，以类/对象为最小单位，考虑谁来做</li>
+<li>面向过程图例</li>
+</ul>
+<p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img.png" alt="img.png"></p>
+<ul>
+<li>面向对象图例</li>
+</ul>
+<p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_1.png" alt="img_1.png"></p>
+<h2 id="Java类的成员"><a href="#Java类的成员" class="headerlink" title="Java类的成员"></a>Java类的成员</h2><ul>
+<li>属性 = 成员变量 = field = 域、字段</li>
+<li>方法 = 成员方法 = 函数 = method</li>
+</ul>
+<p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_2.png" alt="img_2.png"></p>
+<h2 id="类的语法格式"><a href="#类的语法格式" class="headerlink" title="类的语法格式"></a>类的语法格式</h2><p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_3.png" alt="img_3.png"></p>
+<h2 id="Java类与对象的关系"><a href="#Java类与对象的关系" class="headerlink" title="Java类与对象的关系"></a>Java类与对象的关系</h2><p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_4.png" alt="img_4.png"></p>
+<h2 id="Person-p1-new-Person-执行完的内存状态如下图："><a href="#Person-p1-new-Person-执行完的内存状态如下图：" class="headerlink" title="Person p1 = new Person();执行完的内存状态如下图："></a>Person p1 = new Person();执行完的内存状态如下图：</h2><p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_5.png" alt="img_5.png"></p>
+<h2 id="对象的生命周期"><a href="#对象的生命周期" class="headerlink" title="对象的生命周期"></a>对象的生命周期</h2><ul>
+<li>1</li>
+</ul>
+<p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_6.png" alt="img_6.png"></p>
+<ul>
+<li>2</li>
+</ul>
+<p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_7.png" alt="img_7.png"></p>
+<ul>
+<li>3</li>
+</ul>
+<p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_8.png" alt="img_8.png"></p>
+<h2 id="Java内存解析"><a href="#Java内存解析" class="headerlink" title="Java内存解析"></a>Java内存解析</h2><p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_9.png" alt="img_9.png"></p>
+<h2 id="属性-成员变量-VS-局部变量"><a href="#属性-成员变量-VS-局部变量" class="headerlink" title="属性(成员变量) VS 局部变量"></a>属性(成员变量) VS 局部变量</h2><ul>
+<li>1.相同点：</li>
+<li>1.1 定义变量的格式：数据类型 变量名 = 变量值</li>
+<li>1.2 先声明后使用</li>
+<li>1.3 变量都有其作用域</li>
+<li>2.不同点：<img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_10.png" alt="img_10.png"></li>
+<li>2.1 在类中声明的位置不同</li>
+<li>属性：直接定义在类的一对{}中</li>
+<li>局部变量：声明在方法内、方法形参、代码块内、构造器形参、构造器内部的变量</li>
+<li>2.2 关于权限修饰符的不同</li>
+<li>属性：可以在声明属性时，指明其权限，使用权限修饰符</li>
+<li>常用的权限修饰符：private public 缺省 protected —&gt;封装性</li>
+<li>目前，使用缺省就行了</li>
+<li>局部变量：不可以使用权限修饰符</li>
+<li>2.3 默认初始化值<img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_11.png" alt="img_11.png"></li>
+<li>属性：类的属性，根据其类型，都有默认初始化值</li>
+<li>整型（byte、short、int、long）：0</li>
+<li>浮点型（float、double）：0.0</li>
+<li>字符型（char）:0或者’\u0000’</li>
+<li>引用数据类型（类、数组类型、接口）：null</li>
+<li>局部变量：没有默认初始化值，特别地，形参在调用时，我们赋值即可</li>
+<li>2.4在内存中加载的位置</li>
+<li>属性：加载到堆空间</li>
+<li>局部变量：加载到栈空间</li>
+</ul>
+<h2 id="方法的声明格式"><a href="#方法的声明格式" class="headerlink" title="方法的声明格式"></a>方法的声明格式</h2><p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_12.png" alt="img_12.png"></p>
+<ul>
+<li>注意： </li>
+<li>1.修饰符 ：public private 缺省 protected等</li>
+<li>2.返回值类型 ：</li>
+<li>2.1没有返回值：void</li>
+<li>2.2 有返回值，声明出返回值类型。与方法体中“return返回值” 搭配使用</li>
+</ul>
+<p><img src="/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/img_13.png" alt="img_13.png"></p>
+<h2 id="几个练习"><a href="#几个练习" class="headerlink" title="几个练习"></a>几个练习</h2><ul>
+<li>3.1 编写程序声明一个 method方法,在方法中打印一个 10 * 8的 * 型矩形,在main方法中调用该方法 。</li>
+<li>3.2 修改上一个程序在method方法中除打印一个10 * 8的 * 型矩形外再计算该矩形的面积,并将其作为方法返回值 。 在 main方法中调用该方法<br>接收返回的面积值并打印。</li>
+<li>3.3 修改上一个程序，在 method方法提供 m 和 n 两个参数，方法中打印一个 m * n的 * 型矩形，并计算该矩形的面积， 将其作为方法返回值。在 main 方法<br>中调用该方法，接收返回的面积值并打印。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exer3Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        PrintRectangle prc = <span class="keyword">new</span> PrintRectangle();</span><br><span class="line">        System.out.println(prc.method(<span class="number">18</span>,<span class="number">8</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PrintRectangle</span></span>&#123;</span><br><span class="line">    <span class="comment">//3.1</span></span><br><span class="line"><span class="comment">//    public void method()&#123;</span></span><br><span class="line"><span class="comment">//        for(int i = 0;i &lt; 10;i++)&#123;</span></span><br><span class="line"><span class="comment">//            for(int j = 0;j &lt; 8;j++)&#123;</span></span><br><span class="line"><span class="comment">//                System.out.print(&quot;* &quot;);</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"><span class="comment">//            System.out.println();</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line">    <span class="comment">//3.2</span></span><br><span class="line"><span class="comment">//    public int method()&#123;</span></span><br><span class="line"><span class="comment">//        for(int i = 0;i &lt; 10;i++)&#123;</span></span><br><span class="line"><span class="comment">//            for(int j = 0;j &lt; 8;j++)&#123;</span></span><br><span class="line"><span class="comment">//                System.out.print(&quot;* &quot;);</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"><span class="comment">//            System.out.println();</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//        return 10 * 8;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line">    <span class="comment">//3.3</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">method</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; m;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n;j++)&#123;</span><br><span class="line">                System.out.print(<span class="string">&quot;* &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> m * n;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="对象数组"><a href="#对象数组" class="headerlink" title="对象数组"></a>对象数组</h2><ul>
+<li>定义类Student，包含三个属性：学号number(int)，年级state(int)，成绩score(int)。</li>
+<li>创建20个学生对象，学号为1到20，年级和成绩都由随机数确定。</li>
+<li>问题一：打印出3年级(state值为3）的学生信息。</li>
+<li>问题二：使用冒泡排序按学生成绩排序，并遍历所有学生信息</li>
+<li>提示：</li>
+<li>1)生成随机数：Math.random()，返回值类型double;</li>
+<li>2)四舍五入取整：Math.round(double d)，返回值类型long。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentTest</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//声明一个Student的数组</span></span><br><span class="line">        Student[] stus = <span class="keyword">new</span> Student[<span class="number">20</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">20</span>;i++)&#123;</span><br><span class="line">            <span class="comment">//给数组赋值</span></span><br><span class="line">            stus[i] = <span class="keyword">new</span> Student();</span><br><span class="line">            <span class="comment">//给Student对象的属性赋值</span></span><br><span class="line">            stus[i].number = i + <span class="number">1</span>;</span><br><span class="line">            <span class="comment">//年级：[1,6]</span></span><br><span class="line">            stus[i].state = (<span class="keyword">int</span>)(Math.random() * (<span class="number">6</span> - <span class="number">1</span> + <span class="number">1</span>) + <span class="number">1</span>);</span><br><span class="line">            <span class="comment">//成绩：[0,100]</span></span><br><span class="line">            stus[i].score = (<span class="keyword">int</span>)(Math.random() * (<span class="number">100</span> - <span class="number">0</span> + <span class="number">1</span>) + <span class="number">0</span>);</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//遍历学生数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; stus.length;i++)&#123;</span><br><span class="line">            System.out.println(stus[i].info());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//打印出3年级的成绩</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; stus.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(stus[i].state == <span class="number">3</span>)&#123;</span><br><span class="line">                System.out.println(stus[i].info());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//使用冒泡排序按学生成绩排序，并遍历所有学生信息</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; stus.length - <span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; stus.length - i - <span class="number">1</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(stus[j] &gt; stus[j + <span class="number">1</span>])&#123;</span><br><span class="line">                    <span class="comment">//交换的是数组元素，Student对象</span></span><br><span class="line">                    Student temp = stus[j];</span><br><span class="line">                    stus[j] = stus[j + <span class="number">1</span>];</span><br><span class="line">                    stus[j + <span class="number">1</span>] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> number;<span class="comment">//学号</span></span><br><span class="line">    <span class="keyword">int</span> state;<span class="comment">//年级</span></span><br><span class="line">    <span class="keyword">int</span> score;<span class="comment">//成绩</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">info</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;学号：&quot;</span> + number + <span class="string">&quot;年级：&quot;</span> + state + <span class="string">&quot;,&quot;</span> + <span class="string">&quot;成绩：&quot;</span> + score;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="改进算法"><a href="#改进算法" class="headerlink" title="改进算法"></a>改进算法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentTest1</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//声明一个Student的数组</span></span><br><span class="line">		Student2[] stus = <span class="keyword">new</span> Student2[<span class="number">20</span>];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">20</span>;i++)&#123;</span><br><span class="line">			<span class="comment">//给数组赋值</span></span><br><span class="line">			stus[i] = <span class="keyword">new</span> Student2();</span><br><span class="line">			<span class="comment">//给Student对象的属性赋值</span></span><br><span class="line">			stus[i].number = i + <span class="number">1</span>;</span><br><span class="line">			<span class="comment">//年级：[1,6] (int)(Math.random() * (6 - 1 + 1) + 1)</span></span><br><span class="line">			stus[i].state = (<span class="keyword">int</span>)(Math.random() * (<span class="number">6</span> - <span class="number">1</span> + <span class="number">1</span>) + <span class="number">1</span>);</span><br><span class="line">			<span class="comment">//成绩：[0,100]</span></span><br><span class="line">			stus[i].score = (<span class="keyword">int</span>)(Math.random() * (<span class="number">100</span> - <span class="number">0</span> + <span class="number">1</span>) + <span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		StudentTest1 test = <span class="keyword">new</span> StudentTest1();</span><br><span class="line">		<span class="comment">//遍历学生数组</span></span><br><span class="line">		test.print(stus);</span><br><span class="line">		System.out.println(<span class="string">&quot;***********************************&quot;</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//打印出三年级的学生信息</span></span><br><span class="line">		test.searchState(stus, <span class="number">3</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//问题二：使用冒泡排序按学生成绩排序，并遍历所有学生信息</span></span><br><span class="line">		test.sort(stus);</span><br><span class="line">		<span class="comment">//遍历</span></span><br><span class="line">		test.print(stus);</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	* <span class="doctag">@Description</span> 遍历Student2[]数组的操作</span></span><br><span class="line"><span class="comment">	* <span class="doctag">@author</span> dragonlong</span></span><br><span class="line"><span class="comment">	* <span class="doctag">@date</span> 2021年4月8日下午2:36:39</span></span><br><span class="line"><span class="comment">	* <span class="doctag">@param</span> stus</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(Student2[] stus)</span></span>&#123;</span><br><span class="line">		<span class="comment">//遍历学生数组</span></span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; stus.length;i++)&#123;</span><br><span class="line">					System.out.println(stus[i].info());</span><br><span class="line">				&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	* <span class="doctag">@Description</span> 查找Student数组中指定年级的学生信息</span></span><br><span class="line"><span class="comment">	* <span class="doctag">@author</span> dragonlong</span></span><br><span class="line"><span class="comment">	* <span class="doctag">@date</span> 2021年4月8日下午2:33:51</span></span><br><span class="line"><span class="comment">	* <span class="doctag">@param</span> stus 要查找的数组</span></span><br><span class="line"><span class="comment">	* <span class="doctag">@param</span> state 要查找的年级</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">searchState</span><span class="params">(Student2[] stus,<span class="keyword">int</span> state)</span></span>&#123;</span><br><span class="line">		<span class="comment">//问题一、打印出三年级的成绩</span></span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; stus.length;i++)&#123;</span><br><span class="line">					<span class="keyword">if</span>(stus[i].state == state)&#123;</span><br><span class="line">						System.out.println(stus[i].info());</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	* <span class="doctag">@Description</span> 给Student2数组排序</span></span><br><span class="line"><span class="comment">	* <span class="doctag">@author</span> dragonlong</span></span><br><span class="line"><span class="comment">	* <span class="doctag">@date</span> 2021年4月8日下午2:35:54</span></span><br><span class="line"><span class="comment">	* <span class="doctag">@param</span> stus </span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Student2[] stus)</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; stus.length - <span class="number">1</span>;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; stus.length - i - <span class="number">1</span>;j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(stus[j].score &gt; stus[j + <span class="number">1</span>].score)&#123;</span><br><span class="line">					<span class="comment">//如果需要换序，交换的是数组元素，Student对象！！！</span></span><br><span class="line">					Student2 temp = stus[j];</span><br><span class="line">					stus[j] = stus[j + <span class="number">1</span>];</span><br><span class="line">					stus[j + <span class="number">1</span>] = temp;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student2</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number;<span class="comment">//学号</span></span><br><span class="line">	<span class="keyword">int</span> state;<span class="comment">//年级</span></span><br><span class="line">	<span class="keyword">int</span> score;<span class="comment">//成绩</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//显示学生信息的方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">info</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;学号：&quot;</span> + number + <span class="string">&quot;年级：&quot;</span> + state + <span class="string">&quot;,&quot;</span> + <span class="string">&quot;成绩：&quot;</span> + score;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃冰淇淋<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/08/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/06/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%95%B0%E7%BB%842/" class="archive-article-date">
-  	<time datetime="2021-04-06T13:01:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/04/06/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%95%B0%E7%BB%842/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java基础之基础语法-数组2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/06/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%95%B0%E7%BB%842/">Java基础之基础语法-数组2</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/04/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%95%B0%E7%BB%84/" class="archive-article-date">
-  	<time datetime="2021-04-04T08:50:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/04/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%95%B0%E7%BB%84/">Java基础之基础语法-数组</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/02/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B62/" class="archive-article-date">
-  	<time datetime="2021-04-02T11:41:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/02/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B62/">Java基础之基础语法-流程控制2</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/31/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" class="archive-article-date">
-  	<time datetime="2021-03-31T08:03:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/31/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">Java基础之基础语法-程序流程控制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/29/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E8%BF%90%E7%AE%97%E7%AC%A6/" class="archive-article-date">
-  	<time datetime="2021-03-29T11:56:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/29/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E8%BF%90%E7%AE%97%E7%AC%A6/">Java基础之基础语法-运算符</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/27/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/" class="archive-article-date">
-  	<time datetime="2021-03-27T07:34:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/27/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/">Java基础之基础语法(变量与运算符)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2021-03-25T07:41:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">Java基础之Java语言概述</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2021-03-23T11:20:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章!!</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -428,8 +428,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
