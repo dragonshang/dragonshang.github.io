@@ -148,6 +148,127 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java基础之面向对象编程2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/10/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B2/">Java基础之面向对象编程2</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/10/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B2/" class="archive-article-date">
+  	<time datetime="2021-04-10T07:23:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="方法部分"><a href="#方法部分" class="headerlink" title="方法部分"></a>方法部分</h1><h2 id="1-方法的重载"><a href="#1-方法的重载" class="headerlink" title="1.方法的重载"></a>1.方法的重载</h2><h3 id="定义：在同一个类中，允许存在一个同名方法，只要它们的参数个数或者参数类型不同即可。"><a href="#定义：在同一个类中，允许存在一个同名方法，只要它们的参数个数或者参数类型不同即可。" class="headerlink" title="定义：在同一个类中，允许存在一个同名方法，只要它们的参数个数或者参数类型不同即可。"></a>定义：在同一个类中，允许存在一个同名方法，只要它们的参数个数或者参数类型不同即可。</h3><h3 id="“两同一不同”-同一个类，同一个方法名。参数列表不同：参数个数不同，参数类型不同"><a href="#“两同一不同”-同一个类，同一个方法名。参数列表不同：参数个数不同，参数类型不同" class="headerlink" title="“两同一不同”: 同一个类，同一个方法名。参数列表不同：参数个数不同，参数类型不同"></a>“两同一不同”: 同一个类，同一个方法名。参数列表不同：参数个数不同，参数类型不同</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法重载例子</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OverloadExer</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mOL</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">        System.out.println(i * i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mOl</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        System.out.println(i * j);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">mOL</span><span class="params">(<span class="keyword">double</span> d1,<span class="keyword">double</span> d2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (d1 &gt; d2) ? d1 : d2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-可变形参的方法"><a href="#2-可变形参的方法" class="headerlink" title="2.可变形参的方法"></a>2.可变形参的方法</h2><h3 id="定义：允许直接定义能够和多个实参相匹配的形参，从而可以用更简单的方式，来传递个数可变的实参"><a href="#定义：允许直接定义能够和多个实参相匹配的形参，从而可以用更简单的方式，来传递个数可变的实参" class="headerlink" title="定义：允许直接定义能够和多个实参相匹配的形参，从而可以用更简单的方式，来传递个数可变的实参"></a>定义：允许直接定义能够和多个实参相匹配的形参，从而可以用更简单的方式，来传递个数可变的实参</h3><h3 id="具体使用："><a href="#具体使用：" class="headerlink" title="具体使用："></a>具体使用：</h3><ul>
+<li>格式：类型名 … 变量名</li>
+<li>注意点：</li>
+<li>当调用可变个数形参的方法时，传入的参数个数可以是0个、1个、2个…</li>
+<li>可变个数形参的方法与本类中方法名相同，形参不同的方法之间构成重载</li>
+<li>可变个数形参的方法与本类中方法名相同，形参类型也相同的数组之间不构成重载，二者不不能共存</li>
+<li>可变个数形参在方法的形参中，必须声明在末尾</li>
+<li>可变个数形参在方法的形参中，最多只能声明一个可变形参</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MethodArgsTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        MethodArgsTest test = <span class="keyword">new</span> MethodArgsTest();</span><br><span class="line">        test.show(<span class="number">2</span>);</span><br><span class="line">        test.show(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">        test.show(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//	public void show(String s)&#123;</span></span><br><span class="line"><span class="comment">//		System.out.println(&quot;show(String)&quot;);</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">(String ...strings )</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;show(...strings)&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//	public void show(String[] strings)&#123;</span></span><br><span class="line"><span class="comment">//		</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"><span class="comment">//	public void show(String ...strings,int i)&#123;</span></span><br><span class="line"><span class="comment">//		</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">(<span class="keyword">int</span> i,String ...strings)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-方法参数的值传递"><a href="#3-方法参数的值传递" class="headerlink" title="3.方法参数的值传递"></a>3.方法参数的值传递</h2><ul>
+<li>形参：方法声明时的参数</li>
+<li>实参： 方法调用时实际传给形参的参数值</li>
+</ul>
+<h3 id="Java的实参值如何传入方法呢？"><a href="#Java的实参值如何传入方法呢？" class="headerlink" title="Java的实参值如何传入方法呢？"></a>Java的实参值如何传入方法呢？</h3><ul>
+<li><p>java方法的参数传递方式只有一种：值传递</p>
+<h4 id="形参是基本数据类型：将实参基本数据类型变量的”数据值”传递给形参"><a href="#形参是基本数据类型：将实参基本数据类型变量的”数据值”传递给形参" class="headerlink" title="形参是基本数据类型：将实参基本数据类型变量的”数据值”传递给形参"></a>形参是基本数据类型：将实参基本数据类型变量的”数据值”传递给形参</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ValueTransferTest</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		ValueTransferTest test = <span class="keyword">new</span> ValueTransferTest();</span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">5</span>;</span><br><span class="line">		System.out.println(<span class="string">&quot;修改之前x = &quot;</span> + x);</span><br><span class="line">		test.change(x);</span><br><span class="line">		System.out.println(<span class="string">&quot;修改之后x = &quot;</span> + x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;change:修改之前x=&quot;</span> + x);</span><br><span class="line">		x = <span class="number">3</span>;</span><br><span class="line">		System.out.println(<span class="string">&quot;change:修改之后x=&quot;</span> + x);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>运行结果：</p>
+</li>
+</ul>
+<p><img src="/2021/04/10/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B2/img.png" alt="img.png"></p>
+<ul>
+<li>内存图</li>
+</ul>
+<p><img src="/2021/04/10/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B2/img_1.png" alt="img_1.png"></p>
+<h4 id="形参是引用数据类型：将实参引用数据类型变量的“地址值”传递给形参"><a href="#形参是引用数据类型：将实参引用数据类型变量的“地址值”传递给形参" class="headerlink" title="形参是引用数据类型：将实参引用数据类型变量的“地址值”传递给形参"></a>形参是引用数据类型：将实参引用数据类型变量的“地址值”传递给形参</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ValueTransferTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Person obj = <span class="keyword">new</span> Person();</span><br><span class="line">        obj.age = <span class="number">5</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;修改之前age = &quot;</span> + obj.age);</span><br><span class="line"></span><br><span class="line">        change(obj);</span><br><span class="line">        System.out.println(<span class="string">&quot;修改之后age = &quot;</span> + obj.age);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">change</span><span class="params">(Person obj)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;change:修改之前age = &quot;</span> + obj.age);</span><br><span class="line">        obj.age = <span class="number">3</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;change修改之前age = &quot;</span> + obj.age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>运行结果</li>
+</ul>
+<p><img src="/2021/04/10/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B2/img_2.png" alt="img_2.png"></p>
+<ul>
+<li>内存图</li>
+</ul>
+<p><img src="/2021/04/10/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B2/img_3.png" alt="img_3.png"></p>
+<ul>
+<li><p>对程序修改</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ValueTransferTest</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Person obj = <span class="keyword">new</span> Person();</span><br><span class="line">		obj.age = <span class="number">5</span>;</span><br><span class="line">		System.out.println(<span class="string">&quot;修改之前age = &quot;</span> + obj.age);</span><br><span class="line">		</span><br><span class="line">		change(obj);</span><br><span class="line">		System.out.println(<span class="string">&quot;修改之后age = &quot;</span> + obj.age);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">change</span><span class="params">(Person obj)</span></span>&#123;</span><br><span class="line">		obj = <span class="keyword">new</span> Person();</span><br><span class="line">		System.out.println(<span class="string">&quot;change:修改之前age = &quot;</span> + obj.age);</span><br><span class="line">		obj.age = <span class="number">3</span>;</span><br><span class="line">		System.out.println(<span class="string">&quot;change修改之前age = &quot;</span> + obj.age);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>运行结果</p>
+</li>
+</ul>
+<p><img src="/2021/04/10/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B2/img_4.png" alt="img_4.png"></p>
+<ul>
+<li>内存图</li>
+</ul>
+<p><img src="/2021/04/10/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B2/img_5.png" alt="img_5.png"></p>
+<h2 id="4-递归方法"><a href="#4-递归方法" class="headerlink" title="4.递归方法"></a>4.递归方法</h2><ul>
+<li><p>递归方法的使用</p>
+</li>
+<li><p>1.定义：一个方法体内调用自身</p>
+</li>
+<li><p>2.方法递归包含了一个隐式的循环，它会重复执行某段代码，但这种重复执行无需循环控制</p>
+</li>
+<li><p>  递归一定要向已知方向递归，否则这种递归就变成了无穷递归，类似于死循环</p>
+</li>
+<li><p>例子</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RecursionTest</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//计算1- 100之间所有自然数的和</span></span><br><span class="line">		<span class="comment">//方式一：</span></span><br><span class="line"><span class="comment">//		int sum = 0;</span></span><br><span class="line"><span class="comment">//		for(int i = 1;i &lt;= 100;i++)&#123;</span></span><br><span class="line"><span class="comment">//			sum += i;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line">		<span class="comment">//方法二	</span></span><br><span class="line">		RecursionTest test = <span class="keyword">new</span> RecursionTest();</span><br><span class="line">		<span class="keyword">int</span> sum = test.getSum(<span class="number">100</span>);</span><br><span class="line">		System.out.println(sum);</span><br><span class="line">		System.out.println(<span class="string">&quot;**********************&quot;</span>);</span><br><span class="line">		<span class="keyword">int</span> value = test.f(<span class="number">10</span>);</span><br><span class="line">		System.out.println(value);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getSum</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(n == <span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> n + getSum(n - <span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//已知一个数列：f(20) = 1,f(21) = 4,f(n+2) = 2*f(n+1)+f(n),</span></span><br><span class="line">	<span class="comment">//其中n是大于0的整数，求f(10)的值。</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(n == <span class="number">0</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(n == <span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">4</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">2</span> * f(n - <span class="number">1</span>) + f(n - <span class="number">2</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/10/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java基础之面向对象编程1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
