@@ -148,6 +148,114 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java基础之面向对象编程4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/13/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B4/">Java基础之面向对象编程4</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/13/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B4/" class="archive-article-date">
+  	<time datetime="2021-04-13T11:26:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="this、package、import关键字部分"><a href="#this、package、import关键字部分" class="headerlink" title="this、package、import关键字部分"></a>this、package、import关键字部分</h1><h2 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h2><ul>
+<li><p>this可以用来修饰：属性、方法、构造器</p>
+</li>
+<li><p> this理解为当前对象</p>
+</li>
+<li><p> 在类的构造器中，我们可以使用“this.属性”或“this.方法”的方式了，调用当前对象属性和方法，但是通常情况下，我们都选择省略“this.”的方式。特殊情况下，如果方法的形参 和类的属性同名时，必须显式的使用“this.变量”的方式，表明此变量是属性，而非形参。</p>
+</li>
+<li><p>this 调用构造器</p>
+</li>
+<li><p>① 我们在类的构造器中，可以显式使用”this(形参列表)”方式，调用指定的类的其他构造器</p>
+</li>
+<li><p>② 构造器中不能使用this(形参列表)”方式调用自己，只能调用其他构造器</p>
+</li>
+<li><p>③ 如果一个；类中有n个构造器，则最多有n - 1构造器中使用了”this(形参列表)”</p>
+</li>
+<li><p>④ 规定：”this(形参列表)”必须声明在当前构造器的首行</p>
+</li>
+<li><p>⑤ 构造器内部，最多只能声明一个”this(形参列表)”，用来调用其他构造器</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PersonTest</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Person p1 = <span class="keyword">new</span> Person();</span><br><span class="line">		</span><br><span class="line">		p1.setAge(<span class="number">1</span>);</span><br><span class="line">		System.out.println(p1.getAge());</span><br><span class="line">		p1.eat();</span><br><span class="line">		</span><br><span class="line">		System.out.println();</span><br><span class="line">		</span><br><span class="line">		Person p2 = <span class="keyword">new</span> Person(<span class="string">&quot;Jerry&quot;</span>,<span class="number">20</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.eat();</span><br><span class="line">		String info = <span class="string">&quot;Person初始化时，需要考虑如下的1,2,3，4。。。(共40行代码)&quot;</span>;</span><br><span class="line">		System.out.println(info);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>();</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>();</span><br><span class="line">		<span class="keyword">this</span>.age = age;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name,<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>(age);</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">		<span class="comment">//this.age = age;</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.age = age;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.age;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;人吃饭&quot;</span>);</span><br><span class="line">		<span class="keyword">this</span>.study();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;人学习&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="一、package关键字的使用"><a href="#一、package关键字的使用" class="headerlink" title="一、package关键字的使用"></a>一、package关键字的使用</h2><ul>
+<li>1.为了更好的实现项目中类的管理</li>
+<li>2.使用package声明类或结构所属的包，声明在源文件的首行</li>
+<li>3.包，属于标识符，遵循标识符的命名规则、规范。”见明之意”</li>
+<li>4.每”.”一次，就代表一层目录</li>
+<li></li>
+<li>补充：同一个包下，不能命名同名的接口、类， 不同的包下，可以命名同名的接口、类</li>
+<li><h2 id="二、import关键字的使用"><a href="#二、import关键字的使用" class="headerlink" title="二、import关键字的使用"></a>二、import关键字的使用</h2></li>
+<li>import：导入</li>
+<li>1.在源文件中显式的使用import结构导入指定包下的类、接口</li>
+<li>2.声明在包的声明和类的声明之间</li>
+<li>3.如果需要导入多个结构，则并列写出即可</li>
+<li>4.可以使用”xxx.*”的方式，表示可以导入xxx包下的所有结构</li>
+<li>5.如果使用的类或者接口是java.lang包下定义的，则可以省略import结构</li>
+<li>6.如果使用的类或者接口是本包下定义的，则可以省略import结构</li>
+<li>7.如果在源文件中使用不同包下的同名的类，则必须至少有一个以全类名的方式显式</li>
+<li>8.使用”xxx.*”方式表明可以调用xxx包下的所有结构，但是如果使用的是zzz包下的结构，则仍需显式导入。</li>
+<li><ol start="9">
+<li>import static 导入指定类或接口中的静态结构：属性或者方法</li>
+</ol>
+</li>
+</ul>
+<h2 id="MVC设计模式"><a href="#MVC设计模式" class="headerlink" title="MVC设计模式"></a>MVC设计模式</h2><p><img src="/2021/04/13/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B4/img.png" alt="img.png"></p>
+<p><img src="/2021/04/13/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B4/img_1.png" alt="img_1.png"></p>
+<p><img src="/2021/04/13/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B4/img_2.png" alt="img_2.png"></p>
+<p><img src="/2021/04/13/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B4/img_3.png" alt="img_3.png"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/13/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java基础之面向对象编程3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -986,79 +1094,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/03/27/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java基础之Java语言概述" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">Java基础之Java语言概述</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2021-03-25T07:41:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Java语言概述部分"><a href="#Java语言概述部分" class="headerlink" title="Java语言概述部分"></a>Java语言概述部分</h1><h2 id="1-Java是如何运行的？"><a href="#1-Java是如何运行的？" class="headerlink" title="1. Java是如何运行的？"></a>1. Java是如何运行的？</h2><h3 id="编写：我们将编写的java代码保存在以”-java”结尾的源文件中"><a href="#编写：我们将编写的java代码保存在以”-java”结尾的源文件中" class="headerlink" title="编写：我们将编写的java代码保存在以”.java”结尾的源文件中"></a>编写：我们将编写的java代码保存在以”.java”结尾的源文件中</h3><h3 id="编译：使用javac-exe命令编写我们的Java源文件。格式：Javac-源文件名-java"><a href="#编译：使用javac-exe命令编写我们的Java源文件。格式：Javac-源文件名-java" class="headerlink" title="编译：使用javac.exe命令编写我们的Java源文件。格式：Javac 源文件名.java"></a>编译：使用javac.exe命令编写我们的Java源文件。格式：Javac 源文件名.java</h3><h3 id="运行-使用java-exe命令解释运行我们的字节码文件。格式：Java-类名"><a href="#运行-使用java-exe命令解释运行我们的字节码文件。格式：Java-类名" class="headerlink" title="运行:使用java.exe命令解释运行我们的字节码文件。格式：Java 类名"></a>运行:使用java.exe命令解释运行我们的字节码文件。格式：Java 类名</h3><h3 id="具体如下图："><a href="#具体如下图：" class="headerlink" title="具体如下图："></a>具体如下图：</h3><p><img src="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_1.png" alt="img_1.png"></p>
-<p><img src="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_3.png" alt="img_3.png"></p>
-<h3 id="这是Java虚拟机在整个计算机中所处的位置"><a href="#这是Java虚拟机在整个计算机中所处的位置" class="headerlink" title="这是Java虚拟机在整个计算机中所处的位置"></a>这是Java虚拟机在整个计算机中所处的位置</h3><p><img src="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_7.png" alt="img_7.png"></p>
-<h2 id="2-JDK-JRE-JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？"><a href="#2-JDK-JRE-JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？" class="headerlink" title="2. JDK JRE JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？"></a>2. JDK JRE JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？</h2><h3 id="下图可以形象表示他们之间的包含关系"><a href="#下图可以形象表示他们之间的包含关系" class="headerlink" title="下图可以形象表示他们之间的包含关系:"></a>下图可以形象表示他们之间的包含关系:</h3><p><img src="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_4.png" alt="img_4.png"></p>
-<ul>
-<li>JDK = JRE + 开发工具集（Javac编译工具[javac.exe、java.exe、javadoc.exe]等）</li>
-</ul>
-<ul>
-<li>JRE = JVM + Java标准类库</li>
-</ul>
-<h2 id="java-8-0平台下JDK、JRE、JVM的具体组成部分："><a href="#java-8-0平台下JDK、JRE、JVM的具体组成部分：" class="headerlink" title="java 8.0平台下JDK、JRE、JVM的具体组成部分："></a>java 8.0平台下JDK、JRE、JVM的具体组成部分：</h2><p><img src="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_5.png" alt="img_5.png"></p>
-<h2 id="3-为什么要配置环境变量？如何配置？"><a href="#3-为什么要配置环境变量？如何配置？" class="headerlink" title="3. 为什么要配置环境变量？如何配置？"></a>3. 为什么要配置环境变量？如何配置？</h2><h3 id="为了在任何文件路径下都可以执行Java开发环境，比如javac-exe文件，java-exe文件。新建JAVA-HOME-bin的上一层目录，path-JAVA-HOME-bin"><a href="#为了在任何文件路径下都可以执行Java开发环境，比如javac-exe文件，java-exe文件。新建JAVA-HOME-bin的上一层目录，path-JAVA-HOME-bin" class="headerlink" title="为了在任何文件路径下都可以执行Java开发环境，比如javac.exe文件，java.exe文件。新建JAVA_HOME=bin的上一层目录，path= %JAVA_HOME%\bin"></a>为了在任何文件路径下都可以执行Java开发环境，比如javac.exe文件，java.exe文件。新建JAVA_HOME=bin的上一层目录，path= %JAVA_HOME%\bin</h3>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">展开全文 >></a>
         </p>
       
 

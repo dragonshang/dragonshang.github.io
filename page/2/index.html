@@ -148,6 +148,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java基础之Java语言概述" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">Java基础之Java语言概述</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" class="archive-article-date">
+  	<time datetime="2021-03-25T07:41:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java语言概述部分"><a href="#Java语言概述部分" class="headerlink" title="Java语言概述部分"></a>Java语言概述部分</h1><h2 id="1-Java是如何运行的？"><a href="#1-Java是如何运行的？" class="headerlink" title="1. Java是如何运行的？"></a>1. Java是如何运行的？</h2><h3 id="编写：我们将编写的java代码保存在以”-java”结尾的源文件中"><a href="#编写：我们将编写的java代码保存在以”-java”结尾的源文件中" class="headerlink" title="编写：我们将编写的java代码保存在以”.java”结尾的源文件中"></a>编写：我们将编写的java代码保存在以”.java”结尾的源文件中</h3><h3 id="编译：使用javac-exe命令编写我们的Java源文件。格式：Javac-源文件名-java"><a href="#编译：使用javac-exe命令编写我们的Java源文件。格式：Javac-源文件名-java" class="headerlink" title="编译：使用javac.exe命令编写我们的Java源文件。格式：Javac 源文件名.java"></a>编译：使用javac.exe命令编写我们的Java源文件。格式：Javac 源文件名.java</h3><h3 id="运行-使用java-exe命令解释运行我们的字节码文件。格式：Java-类名"><a href="#运行-使用java-exe命令解释运行我们的字节码文件。格式：Java-类名" class="headerlink" title="运行:使用java.exe命令解释运行我们的字节码文件。格式：Java 类名"></a>运行:使用java.exe命令解释运行我们的字节码文件。格式：Java 类名</h3><h3 id="具体如下图："><a href="#具体如下图：" class="headerlink" title="具体如下图："></a>具体如下图：</h3><p><img src="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_1.png" alt="img_1.png"></p>
+<p><img src="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_3.png" alt="img_3.png"></p>
+<h3 id="这是Java虚拟机在整个计算机中所处的位置"><a href="#这是Java虚拟机在整个计算机中所处的位置" class="headerlink" title="这是Java虚拟机在整个计算机中所处的位置"></a>这是Java虚拟机在整个计算机中所处的位置</h3><p><img src="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_7.png" alt="img_7.png"></p>
+<h2 id="2-JDK-JRE-JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？"><a href="#2-JDK-JRE-JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？" class="headerlink" title="2. JDK JRE JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？"></a>2. JDK JRE JVM三者之间的关系，JDK和JRE包含的主要结构有哪些？</h2><h3 id="下图可以形象表示他们之间的包含关系"><a href="#下图可以形象表示他们之间的包含关系" class="headerlink" title="下图可以形象表示他们之间的包含关系:"></a>下图可以形象表示他们之间的包含关系:</h3><p><img src="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_4.png" alt="img_4.png"></p>
+<ul>
+<li>JDK = JRE + 开发工具集（Javac编译工具[javac.exe、java.exe、javadoc.exe]等）</li>
+</ul>
+<ul>
+<li>JRE = JVM + Java标准类库</li>
+</ul>
+<h2 id="java-8-0平台下JDK、JRE、JVM的具体组成部分："><a href="#java-8-0平台下JDK、JRE、JVM的具体组成部分：" class="headerlink" title="java 8.0平台下JDK、JRE、JVM的具体组成部分："></a>java 8.0平台下JDK、JRE、JVM的具体组成部分：</h2><p><img src="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/img_5.png" alt="img_5.png"></p>
+<h2 id="3-为什么要配置环境变量？如何配置？"><a href="#3-为什么要配置环境变量？如何配置？" class="headerlink" title="3. 为什么要配置环境变量？如何配置？"></a>3. 为什么要配置环境变量？如何配置？</h2><h3 id="为了在任何文件路径下都可以执行Java开发环境，比如javac-exe文件，java-exe文件。新建JAVA-HOME-bin的上一层目录，path-JAVA-HOME-bin"><a href="#为了在任何文件路径下都可以执行Java开发环境，比如javac-exe文件，java-exe文件。新建JAVA-HOME-bin的上一层目录，path-JAVA-HOME-bin" class="headerlink" title="为了在任何文件路径下都可以执行Java开发环境，比如javac.exe文件，java.exe文件。新建JAVA_HOME=bin的上一层目录，path= %JAVA_HOME%\bin"></a>为了在任何文件路径下都可以执行Java开发环境，比如javac.exe文件，java.exe文件。新建JAVA_HOME=bin的上一层目录，path= %JAVA_HOME%\bin</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/25/Java%E5%9F%BA%E7%A1%80%E4%B9%8BJava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
